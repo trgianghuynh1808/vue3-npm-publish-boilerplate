@@ -1,0 +1,38 @@
+{
+  "name": "vue3-npm-publish-boilerplate",
+  "version": "1.0.1",
+  "author": {
+    "name": "Eri Huynh"
+  },
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vue3-npm-publish-boilerplate.umd.cjs",
+  "module": "./dist/vue3-npm-publish-boilerplate.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue3-npm-publish-boilerplate.js",
+      "require": "./dist/vue3-npm-publish-boilerplate.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "types": "vue-tsc ",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.47",
+    "vue3-npm-publish-boilerplate": "file:../vue3-npm-publish-boilerplate"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@vitejs/plugin-vue": "^4.2.3",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vue-tsc": "^1.4.2"
+  }
+}
